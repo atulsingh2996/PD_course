@@ -6,9 +6,13 @@
 #Different steps involved in flow- 
 
 ##(1) Design Preparation step-
+
 Command: prep -design <design_name>
+
 ##(2) Synthesis – Synthesis is the process of transforming your RTL into a gate-level netlist, given all the specified constraints and optimization settings.
+
 Command: run_synthesis
+
 Calculating flop ratio- 
 
 ![image](https://user-images.githubusercontent.com/108124284/175554373-d7581753-2de1-42d8-9b0c-0742c75ea380.png)
