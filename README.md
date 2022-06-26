@@ -1,15 +1,15 @@
 # PD_training_course
-#Flow Diagram: ASIC design flow [OpenLANE]: 
+# Flow Diagram: ASIC design flow [OpenLANE]: 
 
  ![image](https://user-images.githubusercontent.com/108124284/175554215-99c2bd58-d7d9-490a-98a1-fdc260f82771.png)
 
 #Different steps involved in flow- 
 
-##(1) Design Preparation step-
+## (1) Design Preparation step-
 
 Command: prep -design <design_name>
 
-##(2) Synthesis – Synthesis is the process of transforming your RTL into a gate-level netlist, given all the specified constraints and optimization settings.
+## (2) Synthesis – Synthesis is the process of transforming your RTL into a gate-level netlist, given all the specified constraints and optimization settings.
 
 Command: run_synthesis
 
@@ -28,7 +28,7 @@ Flops ratio = (1613/14876) *100 = 10.8%
 
 
 
-##(3) Floor planning – In floorplanning, we define the size and shape of your chip or block, place the IO pins/pads, macros and blockage in the core or chip area to effectively find the routing space between them. 
+## (3) Floor planning – In floorplanning, we define the size and shape of your chip or block, place the IO pins/pads, macros and blockage in the core or chip area to effectively find the routing space between them. 
 Also, we reserve the place for standard cells at the floor planning stage.
 Floor planning control parameters like aspect ratio and core utilization are defined as follows:
 Aspect Ratio= Height/Width 
@@ -47,7 +47,7 @@ Std cells are not placed in floor plan step-
 ![image](https://user-images.githubusercontent.com/108124284/175557461-27636c6b-6347-47b8-b57c-b8d09c8c2de2.png)
 
 
-##(4) Placement- Placement is a step in the Physical Implementation process of placing the standard cell in a standard cell rows.
+## (4) Placement- Placement is a step in the Physical Implementation process of placing the standard cell in a standard cell rows.
 There are two steps in placement:
 (1) Global Placement: As a part of global placement all the standard cells will place in standard cell rows but there may be some overlap of standard cells.
 (2) Detail Placement: All standard cells on standard cell rows will be legalized and refined and there will not be any overlaps.
@@ -67,7 +67,7 @@ Standard cell placement-
 
 ![image](https://user-images.githubusercontent.com/108124284/175555527-9eeaafb8-b47a-4df4-9e77-4089da5d3e33.png)
 
-##(5) Standard cell design Flow- 
+## (5) Standard cell design Flow- 
 Cloning the GitHub data to the directory-
 
 ![image](https://user-images.githubusercontent.com/108124284/175555976-a68595ec-ce93-45d9-b459-d4b2f5fba73e.png)
@@ -85,7 +85,7 @@ tkcon window-
 ![image](https://user-images.githubusercontent.com/108124284/175556133-719ecc5b-8679-47f1-9e30-d7ca2c3df83a.png)
 
 
- ###Extracting-
+ ### Extracting-
 ![image](https://user-images.githubusercontent.com/108124284/175556223-4a17e9a7-0eab-487a-a923-916532eb202c.png)
 Extracted parasitic through extract all –
 ![image](https://user-images.githubusercontent.com/108124284/175556264-226aab3f-5f73-4c49-aa60-3775ffe591b2.png)
@@ -106,5 +106,33 @@ Spice file generated from ex2spice command-
 ![image](https://user-images.githubusercontent.com/108124284/175556624-0bf7f78b-8141-43a7-b19a-44e2e38da45f.png)
 
 ![image](https://user-images.githubusercontent.com/108124284/175556652-97170f43-f2ac-4401-935c-0d8b240dea03.png)
+
+## Enabling grid in layout-–
+
+![image](https://user-images.githubusercontent.com/108124284/175800897-4a87e354-8342-4cce-9d61-27e8e25adc16.png)
+
+![image](https://user-images.githubusercontent.com/108124284/175800902-32853728-3a3a-4aa3-99dd-5a5eefccc047.png)
+
+Writing lef file of the inverter-
+
+![image](https://user-images.githubusercontent.com/108124284/175800911-235bb333-8d47-4295-b5fd-02a786cb225f.png)
+
+![image](https://user-images.githubusercontent.com/108124284/175800913-eedb6d33-f3fe-4306-9b97-9805cfc37967.png)
+
+After including inv cell – 
+
+![image](https://user-images.githubusercontent.com/108124284/175800925-168c8e23-9c16-4fd2-b1c8-f8fe65440fa9.png)
+We resolved this warning by making required changes in the config file and final config file is pasted below.
+
+Config file to merge lef and do prep design-
+![image](https://user-images.githubusercontent.com/108124284/175800938-3caa9b4a-8228-4d1d-8918-56e5eeed8a8d.png)
+
+Running synthesis – **our cell is added**.
+![image](https://user-images.githubusercontent.com/108124284/175800958-459c54ef-4311-45f8-a931-26049b9ceaa1.png)
+
+Merged.lef is created here-
+![image](https://user-images.githubusercontent.com/108124284/175800972-b772defe-1088-4e04-a562-6ca317f8a45c.png)
+
+
 
 
