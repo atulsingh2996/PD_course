@@ -154,12 +154,41 @@ After running prep -design picorv32a -tag dir_name -overwrite
 
  ![image](https://user-images.githubusercontent.com/108124284/177954086-955cd05a-691e-46da-bd8f-946bd71451d9.png)
 
- 
+## run_synthesis  
 Running synthesis – **our cell is added**.
 ![image](https://user-images.githubusercontent.com/108124284/175800958-459c54ef-4311-45f8-a931-26049b9ceaa1.png)
 
 Merged.lef is created here-
 ![image](https://user-images.githubusercontent.com/108124284/175800972-b772defe-1088-4e04-a562-6ca317f8a45c.png)
+
+Setting proper variable to resolve the timing violations-
+
+![image](https://user-images.githubusercontent.com/108124284/178060882-a0160f05-7391-47fc-bb51-6b44583b60bb.png)
+
+#After settings delay as 1-
+![image](https://user-images.githubusercontent.com/108124284/178061009-b2231f73-b93d-42e1-ab44-e7b1d0f94da7.png)
+
+
+### running floorplan, placement- 
+
+![image](https://user-images.githubusercontent.com/108124284/178060780-db92f5b4-71d9-401c-bbec-4a9e556a55db.png)
+
+![image](https://user-images.githubusercontent.com/108124284/178061038-3ee50bae-1cc9-4624-a0d7-1f9d367a8443.png)
+
+![image](https://user-images.githubusercontent.com/108124284/178061062-5226fb58-67a9-4e3a-bf6b-1c00dc9a03e4.png)
+
+## Running pre CTS timing analysis 
+Config file-
+![image](https://user-images.githubusercontent.com/108124284/178061198-8f143e12-0451-4246-be00-6f222bde27fb.png)
+
+Running command -
+![image](https://user-images.githubusercontent.com/108124284/178061223-63ed7203-20ea-4211-a343-4ef791dde46c.png)
+
+writing verilog file-
+
+![image](https://user-images.githubusercontent.com/108124284/178061364-7dcfb449-7563-41c6-91c1-9ef1f4bd5fb0.png)
+
+
 
 
 
