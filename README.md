@@ -74,6 +74,8 @@ Cloning the GitHub data to the directory-
 
 
 Standard cell [Inverter] layout in Magic tool- 
+copy the tech file from /home/kunalg123/Desktop/work/tools/openlane_working_dir/pdks/sky130A/libs.tech/magic/sky130A.tech to vsdstdcell dir
+
  ![image](https://user-images.githubusercontent.com/108124284/175556006-df246dd9-9967-4a2a-bc12-4dd38eb61c91.png)
 
  ![image](https://user-images.githubusercontent.com/108124284/175556059-ce279af9-95c4-4246-9cd3-493ef0120304.png)
