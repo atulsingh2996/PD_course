@@ -99,6 +99,9 @@ Spice file generated from ex2spice command-
 ## SPICE characterization-
 (1) Creating subckt file-
 
+![image](https://user-images.githubusercontent.com/108124284/177946824-ae073636-a352-4c77-86d1-7c425710925e.png)
+
+
 (2) Running ngspice-
 
 ![image](https://user-images.githubusercontent.com/108124284/175556548-d8af6400-adb0-4a03-aa75-759224b2b8af.png)
