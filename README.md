@@ -124,14 +124,37 @@ Writing lef file of the inverter-
 
 ![image](https://user-images.githubusercontent.com/108124284/175800913-eedb6d33-f3fe-4306-9b97-9805cfc37967.png)
 
+Include the cell data in design data- 
+-copy the inv lef file and lib file(from vsdstdcelldesign/libs to picorv32a/src folder)
+
 After including inv cell – 
 
 ![image](https://user-images.githubusercontent.com/108124284/175800925-168c8e23-9c16-4fd2-b1c8-f8fe65440fa9.png)
 We resolved this warning by making required changes in the config file and final config file is pasted below.
 
 Config file to merge lef and do prep design-
+
+In the design's config.tcl file add the below line to point to the lef location which is required during spice extraction.
+
+    set ::env(EXTRA_LEFS) [glob $::env(OPENLANE_ROOT)/designs/$::env(DESIGN_NAME)/src/*.lef]
+    
 ![image](https://user-images.githubusercontent.com/108124284/175800938-3caa9b4a-8228-4d1d-8918-56e5eeed8a8d.png)
 
+After running prep -design picorv32a -tag dir_name -overwrite 
+
+![image](https://user-images.githubusercontent.com/108124284/177954527-50646b7d-81fd-4609-896f-573c50edbc45.png)
+
+ 
+--run these commands to add all the reuired lef files-
+ Include the below command to include the additional lef into the flow:
+ 
+    set lefs [glob $::env(DESIGN_DIR)/src/*.lef]
+ 
+    add_lefs -src $lefs
+
+ ![image](https://user-images.githubusercontent.com/108124284/177954086-955cd05a-691e-46da-bd8f-946bd71451d9.png)
+
+ 
 Running synthesis – **our cell is added**.
 ![image](https://user-images.githubusercontent.com/108124284/175800958-459c54ef-4311-45f8-a931-26049b9ceaa1.png)
 
