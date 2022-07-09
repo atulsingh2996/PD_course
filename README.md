@@ -221,6 +221,8 @@ There are number of algorithms to build a clock tree.
 (2) clock mesh 
 etc
 
+Command- run_cts
+
 ![image](https://user-images.githubusercontent.com/108124284/178093876-fcc631ac-4225-495d-9352-32226b1ae55b.png)
 
 ![image](https://user-images.githubusercontent.com/108124284/178093881-e3b75297-50b6-40c4-86f1-759fd5f1493c.png)
@@ -277,6 +279,7 @@ Fast route (for global route-fastroute)- it will create routing guides)
 
 Detail Route (for detailed routing-tritonroute)- it does all the connections
 
+Command- run_routing
 
 ![image](https://user-images.githubusercontent.com/108124284/178094526-47e40c84-043c-41b4-8514-0981a85704b8.png)
 
