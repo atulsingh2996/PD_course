@@ -225,6 +225,9 @@ etc
 
 ![image](https://user-images.githubusercontent.com/108124284/178093881-e3b75297-50b6-40c4-86f1-759fd5f1493c.png)
 
+![image](https://user-images.githubusercontent.com/108124284/178094839-dfa175bd-c7db-4902-8b1d-39c75b8c109f.png)
+
+
 
 ## Timing analysis in openroad tool 
 ![image](https://user-images.githubusercontent.com/108124284/178093933-d391e970-e301-4a2e-a66a-0e43b9569ea5.png)
@@ -259,6 +262,7 @@ Skew values -
 # Creating power delivery network 
 Command- gen_pdn
 
+Visual representation of power delivery network-
 ![image](https://user-images.githubusercontent.com/108124284/178094104-499457b0-fca2-4a2a-9966-e039ef9278cb.png)
 
 ![image](https://user-images.githubusercontent.com/108124284/178094095-fdce88d8-70cf-4a95-be03-58d03d6ce356.png)
