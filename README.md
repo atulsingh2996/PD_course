@@ -267,8 +267,12 @@ Command- gen_pdn
 
 # Routing 
 The routing step adds wires needed to properly connect the placed components while obeying all design rules for the IC.
+maze router, line_probe router, pattern router, gridless router are automatic routers.
 
-maze router, line_probe router, pattern router, gridless router
+Fast route (for global route-fastroute)- it will create routing guides)
+
+Detail Route (for detailed routing-tritonroute)- it does all the connections
+
 
 ![image](https://user-images.githubusercontent.com/108124284/178094526-47e40c84-043c-41b4-8514-0981a85704b8.png)
 
