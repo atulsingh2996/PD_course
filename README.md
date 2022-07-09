@@ -49,7 +49,8 @@ Std cells are not placed in floor plan step-
 ![image](https://user-images.githubusercontent.com/108124284/175557461-27636c6b-6347-47b8-b57c-b8d09c8c2de2.png)
 
 
-# (4) Placement- Placement is a step in the Physical Implementation process of placing the standard cell in a standard cell rows.
+# (4) Placement- 
+Placement is a step in the Physical Implementation process of placing the standard cell in a standard cell rows.
 There are two steps in placement:
 (1) Global Placement: As a part of global placement all the standard cells will place in standard cell rows but there may be some overlap of standard cells.
 (2) Detail Placement: All standard cells on standard cell rows will be legalized and refined and there will not be any overlaps.
