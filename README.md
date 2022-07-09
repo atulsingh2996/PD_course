@@ -281,6 +281,9 @@ Detail Route (for detailed routing-tritonroute)- it does all the connections
 
 Command- run_routing
 
+![image](https://user-images.githubusercontent.com/108124284/178095037-f5303fb0-349f-428b-aaa8-c47e57e71035.png)
+
+
 ![image](https://user-images.githubusercontent.com/108124284/178094526-47e40c84-043c-41b4-8514-0981a85704b8.png)
 
 ![image](https://user-images.githubusercontent.com/108124284/178094214-84f1d159-f766-4579-9c80-19c6adb1bf28.png)
