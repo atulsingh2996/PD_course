@@ -5,52 +5,58 @@
 
 # Different tools inside openlane
 
-*Synthesis
+Synthesis
 
--Generating gate-level netlist (yosys).
+       -Generating gate-level netlist (yosys).
 
--Performing cell mapping (abc).
+       -Performing cell mapping (abc).
 
--Performing pre-layout STA (OpenSTA).
+       -Performing pre-layout STA (OpenSTA).
 
-*Floorplanning
+Floorplanning
 
--Defining the core area for the macro as well as the cell sites and the tracks (init_fp).
+       -Defining the core area for the macro as well as the cell sites and the tracks (init_fp).
 
--Placing the macro input and output ports (ioplacer).
+       -Placing the macro input and output ports (ioplacer).
 
--Generating the power distribution network (pdn).
+       -Generating the power distribution network (pdn).
 
-*Placement
+Placement
 
--Performing global placement (RePLace).
+       -Performing global placement (RePLace).
 
--Perfroming detailed placement to legalize the globally placed components (OpenDP).
+       -Perfroming detailed placement to legalize the globally placed components (OpenDP).
 
-*Clock Tree Synthesis (CTS)
+Clock Tree Synthesis (CTS)
 
--Synthesizing the clock tree (TritonCTS).
+       -Synthesizing the clock tree (TritonCTS).
 
-*Routing
+Routing
 
--Performing global routing to generate a guide file for the detailed router (FastRoute).
+       -Performing global routing to generate a guide file for the detailed router (FastRoute).
 
--Performing detailed routing (TritonRoute)
+       -Performing detailed routing (TritonRoute)
 
-*GDSII Generation
+GDSII Generation
 
--Streaming out the final GDSII layout file from the routed def (Magic).
+       -Streaming out the final GDSII layout file from the routed def (Magic).
 
 # Different steps involved in flow- 
 
 # (1) Design Preparation step-
 
-Command: prep -design <design_name>
+Command: 
+         
+         prep -design <design_name>
+
+         prep -design <design_name> -tag <dir_name> -overwrite       [you can use the old dir instead of creating new one]
 
 # (2) Synthesis – 
 Synthesis is the process of transforming your RTL into a gate-level netlist, given all the specified constraints and optimization settings.
 
-Command: run_synthesis
+Command: 
+         
+         run_synthesis
 
 Calculating flop ratio- 
 
@@ -73,7 +79,9 @@ Also, we reserve the place for standard cells at the floor planning stage.
 Floor planning control parameters like aspect ratio and core utilization are defined as follows:
 Aspect Ratio= Height/Width 
 Utilization factor = Area occupied by netlist / total area of the core
-Command: run_floorplan
+Command: 
+         
+         run_floorplan
 
 
 Floorplan DEF-
@@ -90,7 +98,9 @@ Std cells are not placed in floor plan step-
 # (4) Placement- 
 Placement is a step in the Physical Implementation process of placing the standard cell in a standard cell rows.
 There are two steps in placement:
+
 (1) Global Placement: As a part of global placement all the standard cells will place in standard cell rows but there may be some overlap of standard cells.
+
 (2) Detail Placement: All standard cells on standard cell rows will be legalized and refined and there will not be any overlaps.
 
 Once the placement is done then we must check timing as well as congestion. Outputs from the placement will be netlist, def, and spef.
@@ -181,7 +191,9 @@ In the design's config.tcl file add the below line to point to the lef location 
     
 ![image](https://user-images.githubusercontent.com/108124284/175800938-3caa9b4a-8228-4d1d-8918-56e5eeed8a8d.png)
 
-After running prep -design picorv32a -tag dir_name -overwrite 
+After running
+
+    prep -design picorv32a -tag dir_name -overwrite 
 
 ![image](https://user-images.githubusercontent.com/108124284/177954527-50646b7d-81fd-4609-896f-573c50edbc45.png)
 
