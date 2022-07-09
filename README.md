@@ -3,7 +3,45 @@
 
  ![image](https://user-images.githubusercontent.com/108124284/175554215-99c2bd58-d7d9-490a-98a1-fdc260f82771.png)
 
-#Different steps involved in flow- 
+# Different tools inside openlane
+
+*Synthesis
+
+-Generating gate-level netlist (yosys).
+
+-Performing cell mapping (abc).
+
+-Performing pre-layout STA (OpenSTA).
+
+*Floorplanning
+
+-Defining the core area for the macro as well as the cell sites and the tracks (init_fp).
+
+-Placing the macro input and output ports (ioplacer).
+
+-Generating the power distribution network (pdn).
+
+*Placement
+
+-Performing global placement (RePLace).
+
+-Perfroming detailed placement to legalize the globally placed components (OpenDP).
+
+*Clock Tree Synthesis (CTS)
+
+-Synthesizing the clock tree (TritonCTS).
+
+*Routing
+
+-Performing global routing to generate a guide file for the detailed router (FastRoute).
+
+-Performing detailed routing (TritonRoute)
+
+*GDSII Generation
+
+-Streaming out the final GDSII layout file from the routed def (Magic).
+
+# Different steps involved in flow- 
 
 # (1) Design Preparation step-
 
@@ -288,10 +326,10 @@ Command- run_routing
 
 ![image](https://user-images.githubusercontent.com/108124284/178094214-84f1d159-f766-4579-9c80-19c6adb1bf28.png)
 
-## Spef file created in routing 
+## Spef file generated at routing stage
 ![image](https://user-images.githubusercontent.com/108124284/178094224-dfb50f14-0624-4ba7-99ff-ec9cb87f9053.png)
 
-## Def file created after routing 
+## Def file generated at routing stage 
 ![image](https://user-images.githubusercontent.com/108124284/178094299-7f0b0943-34d6-46c0-9bcc-70869f5cefd7.png)
 
 
